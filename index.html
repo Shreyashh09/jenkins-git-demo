@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="""en
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>jenkins-git-demo</title>
+    <meta name="description" content="Basic demo index page for jenkins-git-demo repository" />
+    <style>
+        :root {
+            --bg: #f7f9fc;
+            --card: #ffffff;
+            --text: #0f172a;
+            --accent: #2563eb;
+        }
+        html,body { height:100%; margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,48px; background:var(--bg); color:var(--text); }
+        .container { max-width:900px; margin:48px auto; padding:24px; }
+        header { display:flex; align-items:center; gap:16px; margin-bottom:20px; }
+        header h1 { font-size:1.5rem; margin:0; }
+        .card { background:var(--card); border-radius:8px; padding:20px; box-shadow:0 6px 18px rgba(15,23,42,0.06); }
+        nav a { color:var(--accent); text-decoration:none; margin-right:12px; font-weight:600; }
+        footer { margin-top:20px; font-size:0.9rem; color:#475569; }
+        pre { background:#0b1220; color:#dbeafe; padding:12px; border-radius:6px; overflow:auto; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <rect x="2" y="2" width="20" height="20" rx="4" fill="#2563eb"/>
+                <path d="M7 12h10" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M7 16h6" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <div>
+                <h1>jenkins-git-demo</h1>
+                <div style="color:#64748b; font-size:0.95rem;">A minimal starter index page</div>
+            </div>
+        </header>
+
+        <main class="card" role="main">
+            <nav aria-label="Primary">
+                <a href="#" onclick="alert('Home clicked'); return false;">Home</a>
+                <a href="#" onclick="alert('Docs clicked'); return false;">Docs</a>
+                <a href="#" onclick="alert('Contact clicked'); return false;">Contact</a>
+            </nav>
+
+            <section style="margin-top:18px;">
+                <h2 style="margin-top:0;">Quick start</h2>
+                <p>This repository contains a simple demo page. Edit <code>index.html</code> to get started.</p>
+
+                <h3>Example</h3>
+                <pre>&lt;!-- Open this file in your browser --&gt;
+&lt;index.html&gt;</pre>
+
+                <p>Current time: <strong id="time">--:--:--</strong></p>
+            </section>
+        </main>
+
+        <footer>
+            <div class="card" style="margin-top:12px; padding:12px;">Built for demonstration. &middot; <small id="year"></small></div>
+        </footer>
+    </div>
+
+    <script>
+        function updateTime() {
+            const el = document.getElementById('time');
+            const now = new Date();
+            el.textContent = now.toLocaleTimeString();
+            document.getElementById('year').textContent = now.getFullYear();
+        }
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>"></html>
